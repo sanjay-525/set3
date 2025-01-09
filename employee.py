@@ -1,15 +1,18 @@
-emp = {'eno':[1,2,3], 'ename':['A','B','C'], 'esal':[10000,22000,30000]}
-print("\n The employee dataset is:")
-print(emp)
-print("--------------------------------")
-print("\n The EMployee Name are:",emp['ename'])
-print("--------------------------------")
-print("\n The employee salaries are:")
-print("--------------------------------")
-for i in emp['esal']:
-    print(i)
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
 
-#sanjay1
-#sanjay111
-#sanjay1111
-#devops
+def generate_primes(start, end):
+    primes = []
+    for num in range(start, end + 1):
+        if is_prime(num):
+            primes.append(num)
+    return primes
