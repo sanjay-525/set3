@@ -16,3 +16,5 @@ def generate_primes(start, end):
         if is_prime(num):
             primes.append(num)
     return primes
+
+    #sanjay
